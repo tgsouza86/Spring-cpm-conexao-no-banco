@@ -1,6 +1,26 @@
 package io.github.dougllasfps.domain.entity;
 
 public class Cliente {
+    public Cliente() {
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
+
+    public Cliente(Integer id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
+    public Cliente(String nome) {
+        this.nome = nome;
+    }
+
     private Integer id;
     private String nome;
 
