@@ -1,6 +1,7 @@
 package io.github.dougllasfps.domain.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "cliente")
@@ -33,6 +34,17 @@ public class Cliente {
     private Integer id;
     @Column(name = "nome", length = 100)
     private String nome;
+
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    @OneToMany(mappedBy = "cliente" )
+    private Set<Pedido> pedidos;
 
     public Integer getId() {
         return id;
