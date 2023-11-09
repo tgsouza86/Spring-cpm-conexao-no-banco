@@ -1,4 +1,4 @@
-package io.github.dougllasfps.domain.repositorio;
+package io.github.dougllasfps.domain.repository;
 
 import io.github.dougllasfps.domain.entity.Cliente;
 import java.util.List;
